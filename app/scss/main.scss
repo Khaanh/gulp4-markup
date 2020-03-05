@@ -1,0 +1,33 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/_fonts';
+@import 'helpers/_base';
+@import 'components/_buttons';
+@import 'components/_header';
+@import 'components/_footer';
+@import 'libs/_libs';
+@import 'pages/_home';
+
+body {
+	background: #000;
+	position: relative;
+	color: $white;
+}
+
+.box {
+	height: 100px;
+	width: 50px;
+	border: 1px solid red;
+	border-radius: 50%;
+}
+
+.container {
+	color: $white;
+}
+
+.section {
+	height: 400px;
+	border: 2px solid blue;
+	background-color: #ccc;
+	margin: 8px;
+}
