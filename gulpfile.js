@@ -9,7 +9,7 @@ const	gulp = require('gulp'),
 	  	browserSync = require('browser-sync'),
 	  	concat = require('gulp-concat'),
 	  	uglify = require('gulp-uglify-es').default,
-	  	injectPartials = require('gulp-inject-partials'),
+	  	include = require('gulp-inject-partials'),
 	  	imagemin = require('gulp-imagemin'),
 	  	pngquant = require('imagemin-pngquant'),
 	  	cache = require('gulp-cache'),
@@ -29,19 +29,15 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
 	return gulp.src('app/**/*.html')
-	.pipe(injectPartials())
+	.pipe(include({
+		removeTags: true,
+		start: '//inc {{path}}',
+		end: '//'
+	}))
 	.pipe(gulp.dest('dist/'))
 	.pipe(browserSync.reload({stream: true}))
 })
 
-
-
-// gulp.task('include', function() {
-// 	return gulp.src('app/layout/*.html')
-// 	.pipe(injectPartials())
-// 	.pipe(gulp.dest('app/'))
-// 	.pipe(browserSync.reload({stream: true}))
-// })
 
 gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss')
@@ -106,7 +102,6 @@ gulp.task('clean', async function() {
 
 gulp.task('watch', function() {
 	gulp.watch('app/**/*.html', gulp.parallel('html'));
-	// gulp.watch('app/layout/*.html', gulp.parallel('include'));
 	gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
 	gulp.watch('app/js/main.js', gulp.parallel('js'));
 	gulp.watch(['app/js/libs/**/*.js', '!app/js/libs/**/*.min.js' ], gulp.parallel('js-libs'));
@@ -114,5 +109,4 @@ gulp.task('watch', function() {
 })
 
 
-gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min'], function() {
-}))
+gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min']))
