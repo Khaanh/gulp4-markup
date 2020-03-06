@@ -6,7 +6,7 @@
 @import 'components/_header';
 @import 'components/_footer';
 @import 'libs/_libs';
-@import 'pages/_home';
+@import 'pages/_home-page';
 
 body {
 	background: #000;
@@ -30,4 +30,5 @@ body {
 	border: 2px solid blue;
 	background-color: #ccc;
 	margin: 8px;
+	height: 100vh;
 }
