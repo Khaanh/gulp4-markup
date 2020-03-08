@@ -44,7 +44,6 @@ gulp.task('html', function() {
 // 		end: '//'
 // 	}))
 // 	.pipe(gulp.dest('app/'))
-// 	.pipe(browserSync.reload({stream: true}))
 // })
 
 gulp.task('sass', function() {
