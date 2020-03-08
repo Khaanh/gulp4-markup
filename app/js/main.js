@@ -1,20 +1,35 @@
-$(document).ready(function(){
-	
+$(function() {
+
+	// Defaults JS
 	$(window).on('scroll', function() {
+		// Active header
 		if( $(this).scrollTop() > 150) {
 			$('.header').addClass('active')
 		} else {
 			$('.header').removeClass('active')
 		}
+		
+		// Active btn to top
+		if( $(this).scrollTop() > 300) {
+			$('.back-to-top').addClass('show')
+		} else {
+			$('.back-to-top').removeClass('show')
+		}
 	})
 
+	// Scroll next section
+	$('.scroll-next').click(function(e) {
+		let next = $(this).closest('.hero').next('#next-section').offset().top;
+		$('html, body').animate({scrollTop: next}, 'slow');
+		e.preventDefault();
+	})
 
-
-    $('#up').click(function() {
-    	$('html, body').animate({scrollTop: 0},500);
-    	console.log('sadas')
-    	return false;
-    })
+	// Acttion btn to top
+	$('.back-to-top').on('click', function() {
+		$('html, body').animate({scrollTop:0}, 500)
+		return false;
+	})
+	
 
 });
 

@@ -2,26 +2,40 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
 	<div class="wrapper">
 		<main class="main-page">
-			<header class="header"></header>
-			<!-- Your content -->
 			
-		<div class="section"></div>
-		<div class="section"></div>
-		<div class="section"></div>
-		<div class="section"></div>
+			//inc layout/_header.html//
+			
+			<!-- Your content -->
+			<div class="hero">
+				<a href="#" class="scroll-next">Scroll to next section</a>
+			</div>
 
-		<div id="up">upupupupu</div>
+			<div class="section" id="next-section"></div>
+			<div class="section"></div>
+			
 
+
+			<div class="back-to-top">
+				<svg viewBox="0 0 492.004 492.004">
+					<path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+				</svg>
+			</div>
 		</main>
-		<footer class="footer"></footer>
+		
+		//inc layout/_footer.html//
 	</div>
-
+	
+	<noscript>Detected missing Javascript support. Certain website features will not operate correctly with Javascript disabled.</noscript>
 	<script src="js/libs/jquery.min.js"></script>
 	<script src="js/main.min.js"></script>
 </body>
