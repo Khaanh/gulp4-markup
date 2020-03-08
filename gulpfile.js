@@ -9,7 +9,7 @@ const	gulp = require('gulp'),
 	  	browserSync = require('browser-sync'),
 	  	concat = require('gulp-concat'),
 	  	uglify = require('gulp-uglify-es').default,
-	  	fileinclude = require('gulp-file-include'),
+	  	include = require('gulp-inject-partials'),
 	  	imagemin = require('gulp-imagemin'),
 	  	pngquant = require('imagemin-pngquant'),
 	  	cache = require('gulp-cache'),
@@ -29,6 +29,11 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
 	return gulp.src('app/**/*.html')
+	.pipe(include({
+		removeTags: true,
+		start: '//inc {{path}}',
+		end: '//'
+	}))
 	.pipe(gulp.dest('dist/'))
 	.pipe(browserSync.reload({stream: true}))
 })
@@ -104,5 +109,4 @@ gulp.task('watch', function() {
 })
 
 
-gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min'], function() {
-}))
+gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min']))
