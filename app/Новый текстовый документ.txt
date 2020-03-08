@@ -34,10 +34,10 @@ Include html parts
 
 Js scripts:
 
-1. Header active
-2. Scroll down
+1. Header active +
+2. Scroll down +
 3. Preloader
-4. Go up
+4. Go up +
 5. Modal
 
 ==============================
