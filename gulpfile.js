@@ -1,25 +1,25 @@
 'use strict';
 
 const	gulp = require('gulp'),
-sass = require('gulp-sass'),
-prefixer = require('gulp-autoprefixer'),
-sourcemaps = require('gulp-sourcemaps'),
-cleanCSS = require('gulp-csso'),
-rename = require('gulp-rename'),
-browserSync = require('browser-sync'),
-concat = require('gulp-concat'),
-uglify = require('gulp-uglify-es').default,
-include = require('gulp-inject-partials'),
-imagemin = require('gulp-imagemin'),
-pngquant = require('imagemin-pngquant'),
-cache = require('gulp-cache'),
-del = require('del');
+			sass = require('gulp-sass'),
+			prefixer = require('gulp-autoprefixer'),
+			sourcemaps = require('gulp-sourcemaps'),
+			cleanCSS = require('gulp-csso'),
+			rename = require('gulp-rename'),
+			browserSync = require('browser-sync'),
+			concat = require('gulp-concat'),
+			uglify = require('gulp-uglify-es').default,
+			include = require('gulp-inject-partials'),
+			imagemin = require('gulp-imagemin'),
+			pngquant = require('imagemin-pngquant'),
+			cache = require('gulp-cache'),
+			del = require('del');
 
 
 gulp.task('browser-sync', function() {
 	browserSync.init({
 		server: {
-			baseDir: 'app/'
+			baseDir: 'dist/'
 		},
 		notify: false
 	})
@@ -29,22 +29,12 @@ gulp.task('html', function() {
 	return gulp.src('app/**/*.html')
 	.pipe(include({
 		removeTags: true,
-		start: '//inc {{path}}',
-		end: '//'
+		start: '{// inc {{path}}',
+		end: '#}'
 	}))
 	.pipe(gulp.dest('dist/'))
 	.pipe(browserSync.reload({stream: true}))
 })
-
-// gulp.task('include', function() {
-// 	return gulp.src('app/layout/*.html')
-// 	.pipe(include({
-// 		removeTags: true,
-// 		start: '//inc {{path}}',
-// 		end: '//'
-// 	}))
-// 	.pipe(gulp.dest('app/'))
-// })
 
 gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss')
@@ -103,7 +93,7 @@ gulp.task('clean', async function() {
 })
 
 gulp.task('watch', function() {
-	gulp.watch(['app/**/*.html', '!app/layout/*.html'], gulp.parallel('html'));
+	gulp.watch('app/**/*.html', gulp.parallel('html'));
 	gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
 	gulp.watch('app/js/main.js', gulp.parallel('js'));
 	gulp.watch(['app/js/libs/**/*.js', '!app/js/libs/**/*.min.js' ], gulp.parallel('js-libs'));
