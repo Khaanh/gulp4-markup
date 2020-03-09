@@ -7,6 +7,7 @@
 html {
 	height: 100%;
 }
+
 body {
 	font: normal normal 16px/1.25 Arial,sans-serif;
 	color: $black;
@@ -43,7 +44,35 @@ body {
 	margin: 0 auto;
 }
 
-.header {
-	background: red;
-	height: 50px;
+// Styles
+
+.back-to-top {
+	@include transition;
+	@include hide-elem;
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	z-index: 777;
+	cursor: pointer;
+	height: 34px;
+	width: 34px;
+	> svg {
+		width: 100%;
+		height: 100%;
+		transform: rotate(-90deg);
+	}
+	&.show {
+		@include show-elem;
+	}
+}
+
+// Slick styles
+.slick-arrow {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	> svg {
+		transition: 0.3s ease-in-out;
+	}
 }
