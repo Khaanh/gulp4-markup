@@ -5,7 +5,23 @@
 @import 'components/_buttons';
 @import 'components/_header';
 @import 'components/_footer';
-@import 'libs/_libs';
 @import 'libs/_slick';
 @import 'libs/_jquery.mCustomScrollbar';
 @import 'pages/_home-page';
+
+
+// Styles scrollbars
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+	background-color: $dragger_bar-color;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: $dragger_bar-color;
+	width: $dragger_bar-width;
+	border-radius: $dragger_bar-radius;
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+	background-color: $dragger_rail-color;
+}
+.mCSB_scrollTools {
+	opacity: $scrollTools-opacity;
+}
