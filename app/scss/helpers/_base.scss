@@ -44,8 +44,7 @@ body {
 	margin: 0 auto;
 }
 
-// Styles
-
+// Btn up  Styles
 .back-to-top {
 	@include transition;
 	@include hide-elem;
@@ -76,3 +75,5 @@ body {
 		transition: 0.3s ease-in-out;
 	}
 }
+
+

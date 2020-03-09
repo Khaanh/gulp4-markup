@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Document</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.min.css">
-</head>
+  {// inc layout/_head.html #}
 <body>
-	<div class="wrapper">
-		<main class="main-page">
-			
+  <div class="wrapper">
+    <main class="main-page">
+      
       {// inc layout/_header.html #}
       
       <div id="ui-kit">
+
         <div class="hero">
-          <div class="hero__img">
-            <img src="./img/ui-kit.jpg" alt="UI-kit">
+          <div class="slideshow">
+            <div class="slideshow__arrows"></div>
+            <div class="slideshow__list">
+              <div class="slideshow__items">
+                <img src="./img/ui-kit.jpg" alt="UI-kit">
+              </div>
+              <div class="slideshow__items">
+                <img src="./img/ui-kit.jpg" alt="UI-kit">
+              </div>
+              <div class="slideshow__items">
+                <img src="./img/ui-kit.jpg" alt="UI-kit">
+              </div>
+            </div>
           </div>
+          
           <a href="#" class="scroll-next js-scroll-next">Scroll to next section</a>
         </div>
+
         <div class="section" id="next-section">
-          <hr class="base">
           <h1>Scroll block</h1>
+          <hr class="base">
           <div class="scroll-text">
             <p>
               Лист Василя Стуса до сина 
@@ -55,8 +61,10 @@
             </p>
           </div>
         </div>
-
+        
         <hr class="base">
+
+        <h1>Default slider</h1>
 
         <div class="slider-block">
           <div class="container">
@@ -73,28 +81,27 @@
             </div>
           </div>
         </div>
-
+        
         <hr class="base">
         
-
       </div>
-			
-
-
-			<div class="back-to-top">
-				<svg viewBox="0 0 492.004 492.004">
-					<path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
-				</svg>
-			</div>
-		</main>
-		
-		{// inc layout/_footer.html #}
-	</div>
-	
-	<noscript>Detected missing Javascript support. Certain website features will not operate correctly with Javascript disabled.</noscript>
-	<script src="js/libs/jquery.min.js"></script>
-	<script src="js/libs/jquery.mCustomScrollbar.min.js"></script>
-	<script src="js/libs/slick.min.js"></script>
-	<script src="js/main.min.js"></script>
+      
+      
+      
+      <div class="back-to-top">
+        <svg viewBox="0 0 492.004 492.004">
+          <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+        </svg>
+      </div>
+    </main>
+    
+    {// inc layout/_footer.html #}
+  </div>
+  
+  <noscript>Detected missing Javascript support. Certain website features will not operate correctly with Javascript disabled.</noscript>
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/jquery.mCustomScrollbar.min.js"></script>
+  <script src="js/libs/slick.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>
