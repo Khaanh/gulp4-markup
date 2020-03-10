@@ -37,7 +37,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-inject-partials": "^1.0.5",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "imagemin-pngquant": "^8.0.0",

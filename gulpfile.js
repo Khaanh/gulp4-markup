@@ -9,7 +9,7 @@ const	gulp = require('gulp'),
 			browserSync = require('browser-sync'),
 			concat = require('gulp-concat'),
 			uglify = require('gulp-uglify-es').default,
-			include = require('gulp-inject-partials'),
+			include = require('gulp-rigger'),
 			imagemin = require('gulp-imagemin'),
 			pngquant = require('imagemin-pngquant'),
 			cache = require('gulp-cache'),
@@ -27,11 +27,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
 	return gulp.src('app/**/*.html')
-	.pipe(include({
-		removeTags: true,
-		start: '{// inc {{path}}',
-		end: '#}'
-	}))
+	.pipe(include())
 	.pipe(gulp.dest('dist/'))
 	.pipe(browserSync.reload({stream: true}))
 })
