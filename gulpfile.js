@@ -9,7 +9,7 @@ const	gulp = require('gulp'),
 			browserSync = require('browser-sync'),
 			concat = require('gulp-concat'),
 			uglify = require('gulp-uglify-es').default,
-			include = require('gulp-rigger'),
+			rigger = require('gulp-rigger'),
 			imagemin = require('gulp-imagemin'),
 			pngquant = require('imagemin-pngquant'),
 			cache = require('gulp-cache'),
@@ -27,7 +27,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
 	return gulp.src('app/**/*.html')
-	.pipe(include())
+	.pipe(rigger())
 	.pipe(gulp.dest('dist/'))
 	.pipe(browserSync.reload({stream: true}))
 })
@@ -49,6 +49,7 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
 	return gulp.src('app/js/main.js')
+	.pipe(rigger())
 	.pipe(uglify({
 		mangle: {
 			toplevel: true
