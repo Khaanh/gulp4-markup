@@ -1,10 +1,11 @@
 $(function() {
+	//= include/default
+	//= include/sliders
+	//= include/tabs
+
 
 	console.log(2 + 2)
 	
-	//= include/default
-	//= include/sliders
-
 });
 
 
