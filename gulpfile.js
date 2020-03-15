@@ -9,7 +9,7 @@ const	gulp = require('gulp'),
 			browserSync = require('browser-sync'),
 			concat = require('gulp-concat'),
 			uglify = require('gulp-uglify-es').default,
-			include = require('gulp-inject-partials'),
+			rigger = require('gulp-rigger'),
 			imagemin = require('gulp-imagemin'),
 			pngquant = require('imagemin-pngquant'),
 			cache = require('gulp-cache'),
@@ -27,11 +27,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
 	return gulp.src('app/**/*.html')
-	.pipe(include({
-		removeTags: true,
-		start: '{// inc {{path}}',
-		end: '#}'
-	}))
+	.pipe(rigger())
 	.pipe(gulp.dest('dist/'))
 	.pipe(browserSync.reload({stream: true}))
 })
@@ -53,6 +49,7 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
 	return gulp.src('app/js/main.js')
+	.pipe(rigger())
 	.pipe(uglify({
 		mangle: {
 			toplevel: true
@@ -96,6 +93,7 @@ gulp.task('watch', function() {
 	gulp.watch('app/**/*.html', gulp.parallel('html'));
 	gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
 	gulp.watch('app/js/main.js', gulp.parallel('js'));
+	gulp.watch('app/js/include/**/*.js', gulp.parallel('js'));
 	gulp.watch(['app/js/libs/**/*.js', '!app/js/libs/**/*.min.js' ], gulp.parallel('js-libs'));
 	gulp.watch('app/img/**/*', gulp.parallel('img-min'));
 })
