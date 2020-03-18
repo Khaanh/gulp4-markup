@@ -53,8 +53,24 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@include transition;
+	&:hover {
+		background-color: $black;
+		> svg {
+			path {
+				fill: $white;
+			}
+		}
+	}
 	> svg {
 		transition: 0.3s ease-in-out;
+	}
+	&.next-arrow {
+		transform: rotate(180deg);
+		right: -40px;
+	}
+	&.prev-arrow {
+    left: -40px;
 	}
 }
 
