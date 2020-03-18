@@ -8,6 +8,12 @@
 		text-transform: uppercase;
 		color: #27ae60;
 	}
+	.ui-holder {
+		display: flex;
+		&__column {
+			width: 50%;
+		}
+	}
 
 	.hero {
 		height: 100vh;

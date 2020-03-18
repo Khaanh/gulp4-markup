@@ -91,7 +91,7 @@ gulp.task('clean', async function() {
 
 gulp.task('watch', function() {
 	gulp.watch('app/**/*.html', gulp.parallel('html'));
-	gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
+	gulp.watch('app/scss/**/*.scss', gulp.series('sass', 'html'));
 	gulp.watch('app/js/main.js', gulp.parallel('js'));
 	gulp.watch('app/js/include/**/*.js', gulp.parallel('js'));
 	gulp.watch(['app/js/libs/**/*.js', '!app/js/libs/**/*.min.js' ], gulp.parallel('js-libs'));
