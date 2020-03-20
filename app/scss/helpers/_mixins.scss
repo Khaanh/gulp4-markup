@@ -111,6 +111,21 @@ $mobile-portrait: 479px;
   visibility: visible;
 }
 
+// Pseudo-elements
+@mixin after() {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+}
+@mixin before() {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+}
 // Transitions
 @mixin transition() {
   transition: all 0.3s ease-in-out
