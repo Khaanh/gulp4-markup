@@ -13,7 +13,9 @@ const	gulp = require('gulp'),
 			imagemin = require('gulp-imagemin'),
 			pngquant = require('imagemin-pngquant'),
 			cache = require('gulp-cache'),
-			del = require('del');
+			del = require('del'),
+			ghPages = require('gulp-gh-pages');
+
 
 
 gulp.task('browser-sync', function() {
@@ -23,6 +25,11 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false
 	})
+})
+
+gulp.task('deploy', function() {
+	return gulp.src('./dist/**/*')
+	.pipe(ghPages());
 })
 
 gulp.task('html', function() {
