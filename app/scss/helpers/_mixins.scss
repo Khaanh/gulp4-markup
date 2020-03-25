@@ -134,5 +134,13 @@ $mobile-portrait: 479px;
   transition: all 0.5s ease-in-out
 }
 
+//Hover
+@mixin hover() {
+  @media only screen and (min-width: 1025px) {
+    &:hover {
+      @content;
+    }
+  }
+}
 
 
