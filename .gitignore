@@ -6,3 +6,10 @@
 /**/package-lock.json
 /**/Thumbs.db
 /**/*.DS_Store
+*.todo
+*.txt
+*.todolist
+*.tasks 
+*.taskpaper
+/TODO
+/estimate.txt/

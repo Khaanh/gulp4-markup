@@ -10,6 +10,12 @@ $mobile-landscape: 768px;
 $mobile-middle: 620px;
 $mobile-portrait: 479px;
 
+@mixin media($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
 @mixin desktop-lg {
   @media (max-width: #{$desktop-lg}) {
     @content;
@@ -111,6 +117,21 @@ $mobile-portrait: 479px;
   visibility: visible;
 }
 
+// Pseudo-elements
+@mixin after() {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+}
+@mixin before() {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+}
 // Transitions
 @mixin transition() {
   transition: all 0.3s ease-in-out
@@ -119,5 +140,13 @@ $mobile-portrait: 479px;
   transition: all 0.5s ease-in-out
 }
 
+//Hover
+@mixin hover() {
+  @media only screen and (min-width: 1025px) {
+    &:hover {
+      @content;
+    }
+  }
+}
 
 

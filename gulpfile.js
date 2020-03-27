@@ -13,7 +13,9 @@ const	gulp = require('gulp'),
 			imagemin = require('gulp-imagemin'),
 			pngquant = require('imagemin-pngquant'),
 			cache = require('gulp-cache'),
-			del = require('del');
+			del = require('del'),
+			ghPages = require('gulp-gh-pages');
+
 
 
 gulp.task('browser-sync', function() {
@@ -23,6 +25,11 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false
 	})
+})
+
+gulp.task('deploy', function() {
+	return gulp.src('./dist/**/*')
+	.pipe(ghPages());
 })
 
 gulp.task('html', function() {
@@ -46,6 +53,12 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}))
 })
+
+gulp.task('fonts', function() {
+	return gulp.src('./app/fonts/**/*.*')
+	.pipe(gulp.dest('dist/fonts/'))
+	.pipe(browserSync.reload({stream: true}))
+});
 
 gulp.task('js', function() {
 	return gulp.src('app/js/main.js')
@@ -96,6 +109,7 @@ gulp.task('watch', function() {
 	gulp.watch('app/js/include/**/*.js', gulp.parallel('js'));
 	gulp.watch(['app/js/libs/**/*.js', '!app/js/libs/**/*.min.js' ], gulp.parallel('js-libs'));
 	gulp.watch('app/img/**/*', gulp.parallel('img-min'));
+	gulp.watch('./app/fonts/**/*.*', gulp.parallel('fonts'));
 })
 
-gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min']))
+gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min', 'fonts']))

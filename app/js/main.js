@@ -3,12 +3,7 @@ $(function() {
 	//= include/sliders
 	//= include/tabs
 	//= include/popup
-	
-	
-	console.log(2 + 2)
-	
-	
-	
+	//= include/markuplist
 	
 });
 

@@ -1,12 +1,14 @@
 @mixin font($fontname, $filename, $fontweight, $fontstyle) {
   @font-face {
     font-family: $fontname;
-    src: url(#{'./fonts/'+$filename+'.eot'});
+    src: url(#{'../fonts/'+$filename+'.eot'});
     src:
       local('😥'),
-      url(#{'./fonts/'+$filename+'.woff'}) format("woff"),
-      url(#{'./fonts/'+$filename+'.ttf'}) format("truetype");
+      url(#{'../fonts/'+$filename+'.woff'}) format("woff"),
+      url(#{'../fonts/'+$filename+'.ttf'}) format("truetype");
     font-weight: $fontweight;
     font-style: $fontstyle;
   }
 }
+
+@include font(Gilroy-Semibold,Gilroy-Semibold, 600, normal);
