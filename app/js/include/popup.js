@@ -20,12 +20,10 @@ $('.js-modal-close').on('click', function() {
 
 $(document).mouseup(function (e){
   let closeModal = $('.modal-content'); 
-  console.log(1)
   if (!closeModal.is(e.target) && closeModal.has(e.target).length === 0) { 
     closeModal.closest('.modal').removeClass('active');
     $('body').css({
       'padding-right': ''
     }).removeClass('modal-open');
-    console.log(2)
   }
 });
