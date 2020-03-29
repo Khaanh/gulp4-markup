@@ -3,6 +3,7 @@ $(function() {
 	//= include/sliders
 	//= include/tabs
 	//= include/popup
+  //= include/forms
 	//= include/markuplist
 	
 });
