@@ -4,7 +4,7 @@ const	gulp = require('gulp'),
 			sass = require('gulp-sass'),
 			prefixer = require('gulp-autoprefixer'),
 			sourcemaps = require('gulp-sourcemaps'),
-			cleanCSS = require('gulp-csso'),
+			cleanCSS = require('gulp-clean-css'),
 			rename = require('gulp-rename'),
 			browserSync = require('browser-sync'),
 			concat = require('gulp-concat'),
@@ -45,7 +45,7 @@ gulp.task('sass', function() {
 	.pipe(sass().on('error', sass.logError))
 	.pipe(prefixer(['last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'], {cascade: false}))
 	.pipe(gulp.dest('app/css'))
-	.pipe(cleanCSS())
+	.pipe(cleanCSS({compatibility: 'ie8'}))
 	.pipe(concat('main.css'))
 	.pipe(rename({suffix: '.min'}))
 	.pipe(sourcemaps.write(''))
