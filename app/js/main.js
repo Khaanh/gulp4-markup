@@ -4,6 +4,7 @@ $(function() {
 	//= include/tabs
 	//= include/popup
   //= include/forms
+  //= include/accordion
 	//= include/markuplist
 	
 });
