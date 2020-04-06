@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: flex-end;
     li {
+      padding: 4px 10px;
       a {
         font-size: 14px;
         line-height: 16px;
@@ -39,10 +40,24 @@
         letter-spacing: -0.0125em;
         color: $white;
         opacity: 0.9;
-        padding: 4px 10px;
+        position: relative;
+        overflow: hidden;
         @include transition;
-        @include hover () {
+        &:after {
+          content: attr(data-hover);
+          display: block;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          max-width: 0;
+          transition: max-width 0.7s;
           color: $main;
+        }
+        @include hover () {
+          &:after {
+            max-width: 100%;
+          }
         }
       }
     }
