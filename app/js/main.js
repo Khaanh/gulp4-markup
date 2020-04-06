@@ -1,5 +1,4 @@
 $(function() {
-  //= include/range-slider
 	//= include/markuplist
   //= include/accordion
 	//= include/default

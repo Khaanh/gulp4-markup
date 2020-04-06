@@ -6,5 +6,153 @@
 	width: 100%;
 	z-index: 998;
 	@include transition;
+  background-color: $black;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 105px;
+    padding: 10px;
+    max-width: 1328px;
+  }
   &.active {}
+}
+
+.logo {
+  text-decoration: none;
+  display: block;
+}
+
+.nav-menu {
+  margin-right: 128px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    li {
+      a {
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: left;
+        letter-spacing: -0.0125em;
+        color: $white;
+        opacity: 0.9;
+        padding: 4px 10px;
+        @include transition;
+        @include hover () {
+          color: $main;
+        }
+      }
+    }
+  }
+}
+
+.header-widget {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.langs {
+  margin-right: 38px;
+  position: relative;
+  cursor: pointer;
+  @include hover () {
+    .langs-current {
+      opacity: 0.9;
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+    .langs-list {
+      @include show-elem;
+    }
+  }
+}
+
+.langs-current {
+  color: $main;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.0125em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 1;
+  @include transition;
+  &:after {
+    content: '';
+    display: block;
+    background: url(../img/lang-icon.svg) center /contain no-repeat;
+    width: 8px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    right: -10px;
+    transform-origin: center;
+    transform: rotate(0);
+    @include transition;
+  }
+}
+
+.langs-list {
+  text-align: center;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  @include transition;
+  @include hide-elem;
+}
+
+.langs-items {
+  margin-bottom: 2px;
+}
+
+.langs-link {
+  color: $main;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: -0.0125em;
+  opacity: 1;
+  @include transition;
+  @include hover () {
+    opacity: 0.9;
+  }
+}
+
+.private {
+  min-width: 220px;
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid $main;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 18px;
+  color: $main;
+  padding: 15px 12px;
+  @include transition;
+  @include hover () {
+    background-color: $main;
+    color: $white
+  }
 }

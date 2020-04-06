@@ -20,8 +20,9 @@
 }
 
 .container {
-	width: 1140px;
-	max-width: 95%;
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 10px;
 	color: $black;
 	margin: 0 auto;
 }
@@ -76,7 +77,7 @@
 
 // Form styles 
 .form__control{
-  font-family: "Montserrat", OpenSans, sans-serif;
+  font-family: "Ubuntu", OpenSans, sans-serif;
   display: inline-block;
   vertical-align: top;
   width: 100%;
