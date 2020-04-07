@@ -72,7 +72,7 @@
 
 .expl-block {
   padding-top: 208px;
-  color: $gray;
+  color: #7f8c8d;
   .headline {
     margin-bottom: 80px;
   }
@@ -134,4 +134,53 @@
       margin: 0;
     }
   }
+}
+
+.priority {
+  background-color: $steel;
+  padding: 80px 0 198px;
+  position: relative;
+}
+
+.direct-row {
+  background-color: $steel;
+  color: #7f8c8d;
+  padding: 94px 0;
+  &:nth-child(odd) {
+    background-color: $cinder;
+    .direct-row__container {
+      flex-direction: row-reverse
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  &--start {
+    .direct-row__container {
+      justify-content: flex-start;
+    }
+    .direct-descr {
+      margin: 0 70px 0 0;
+    }
+  }
+}
+
+.direct-descr {
+  max-width: 576px;
+  width: 100%;
+  color: #7f8c8d;
+  margin: 0 70px;
+  strong {
+    font-size: 20px;
+    line-height: 25px;
+    color: $white;
+    opacity: 0.8;
+  }
+}
+
+.direct-ill {
+  margin: 0 70px;
 }
