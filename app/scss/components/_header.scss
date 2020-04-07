@@ -31,6 +31,26 @@
     justify-content: flex-end;
     li {
       padding: 4px 10px;
+      position: relative;
+      @include hover () {
+        &:before {
+          @include show-elem;
+          transform: translate(-50%, 0);
+        }
+      }
+      &:before {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 60%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -10px);
+        background-color: $main;
+        @include hide-elem;
+        @include transition;
+      }
       a {
         font-size: 14px;
         line-height: 16px;

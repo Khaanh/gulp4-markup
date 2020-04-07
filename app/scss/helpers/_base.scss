@@ -17,10 +17,11 @@
 .main-page {
 	flex: 1 0 auto;
 	overflow: hidden;
+  padding-top: 105px;
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1160px;
   width: 100%;
   padding: 0 10px;
 	color: $black;
@@ -48,31 +49,38 @@
 	}
 }
 
-// Slick styles
-.slick-arrow {
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	@include transition;
-	&:hover {
-		background-color: $black;
-		> svg {
-			path {
-				fill: $white;
-			}
-		}
-	}
-	> svg {
-		transition: 0.3s ease-in-out;
-	}
-	&.next-arrow {
-		transform: rotate(180deg);
-		right: -40px;
-	}
-	&.prev-arrow {
-    left: -40px;
-	}
+.headline {
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: 300;
+  color: $white;
+  position: relative;
+  text-align: center;
+  &:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 150px;
+    background-color: $main;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  &--dark {
+    color: $black;
+  }
+  &--md {
+    font-size: 25px;
+    line-height: 38px;
+  }
+  &--left {
+    text-align: left;
+    &:after {
+      left: 0;
+      transform: translate(0, 0);
+    }
+  }
 }
 
 // Form styles 
