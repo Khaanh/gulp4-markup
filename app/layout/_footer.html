@@ -4,3 +4,78 @@
 
   </div>
 </footer>
+
+<!-- ========================== -->
+<div class="html-wrap">
+  <div class="toggle-menu js-close-menu">
+    <span>Close list</span>
+  </div>
+  <ul class="html-list">
+    <li class="html-items">
+      <span>1.</span>
+      <a href="./index.html" class="html-link">index.html</a>
+    </li>
+    <li class="html-items">
+      <span>2.</span>
+      <a href="./ui-kit.html" class="html-link">UI-Kit.html</a>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .html-wrap {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #000;
+    background: #fff;
+    z-index: 999;
+  }
+  .html-list {
+    padding: 12px 8px;
+    height: 200px;
+    overflow: auto;
+    height: auto;
+    width: auto;
+    display: block;
+  }
+  .inactive {
+    display: none;
+  }
+  .html-items {
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .html-items span {
+    display: inline-block;
+    margin-right: 6px;
+    min-width: 21px;
+  }
+  .html-link {
+    color: #000;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .html-link:hover {
+    text-decoration: none;
+  }
+  .toggle-menu {
+    color: #000;
+    display: block;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    padding: 0;
+    text-align: right;
+  }
+  .toggle-menu span {
+    text-align: center;
+    display: block;
+    background: #000;
+    color: #fff;
+    padding: 0 6px;
+  }
+</style>
+<!-- ========================== -->
