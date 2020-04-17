@@ -2,7 +2,7 @@
 <html lang="en">
 //= layout/_head.html
 <body>
-  <div class="wrapper">
+  <div id="ui-kit" class="wrapper">
     <main class="main-page">
       
       //= layout/_header.html
@@ -10,7 +10,7 @@
       <div id="ui-kit">
         
         <!-- hero -->
-        <div class="hero">
+        <div class="hero" id="hero">
           <div class="slideshow">
             <div class="slideshow__arrows"></div>
             <div class="slideshow__list">
@@ -113,7 +113,7 @@
         
         <!-- default slider -->
         <h1>Default slider</h1>
-        <div class="slider-block">
+        <div class="slider-block" id="default-slider">
           <div class="container">
             <div class="slider-block__box">
               <div class="slider-block__arrows"></div>
@@ -132,56 +132,71 @@
         <hr class="base">
 
         <!-- modal -->
-        <h1>Modal</h1>
-        <a href="#" class="js-modal-open" data-target='modal-1'>Open modal</a>
+        <div class="section" id="modal">
+          <h1>Modal</h1>
+          <a href="#" class="js-modal-open" data-target='modal-1'>Open modal</a>
 
-        <div class="modal" data-open='modal-1'>
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button class="modal-close js-modal-close">
-                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                    <rect width="19.2846" height="1.92846" transform="matrix(0.70711 0.707103 -0.70711 0.707103 1.36368 0.000183105)" fill="#08B87D"/>
-                    <rect width="19.2846" height="1.92846" transform="matrix(0.70711 -0.707104 0.70711 0.707103 0 13.6362)" fill="#08B87D"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="modal-body">
-                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              </div>
-              <div class="modal-footer">
-                <button class="js-modal-close">Close</button>
-                <button>Save changes</button>
+          <div class="modal" data-open='modal-1'>
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button class="modal-close js-modal-close">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                      <rect width="19.2846" height="1.92846" transform="matrix(0.70711 0.707103 -0.70711 0.707103 1.36368 0.000183105)" fill="#08B87D"/>
+                      <rect width="19.2846" height="1.92846" transform="matrix(0.70711 -0.707104 0.70711 0.707103 0 13.6362)" fill="#08B87D"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                  <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                  <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                  <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="js-modal-close">Close</button>
+                  <button>Save changes</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Checkbox -->
-        <h1>Checkbox</h1>
-        <div class="checkbox-section">
-          <label class="checkbox">
-            <input type="checkbox" class="visually-hidden">
-            <span class="checkmark"></span>
-            <p> Some text  & <a href="#">link</a></p>
-          </label>
-        </div>
 
-        <!-- Input +/- -->
-        <h1>Input +/- </h1>
-        <form action="#">
-          <div class="quantity">
-            <button type='button' class="btn-test quantity-plus"></button>
-            <div class="quantity-holder">
-              <input type="text" value="1" min="1" max="10" class="quantity-count">
+        <!-- Form elements -->
+
+        <section class="form-elements" id="form-elements">
+          <h1>Form elements</h1>
+          <div class="row">
+            <!-- Checkbox -->
+            <div class="column">
+              <h2>Checkbox</h2>
+              <div class="checkbox-section">
+                <label class="checkbox">
+                  <input type="checkbox" class="visually-hidden">
+                  <span class="checkmark"></span>
+                  <p> Some text  & <a href="#">link</a></p>
+                </label>
+              </div>
             </div>
-            <button type='button' class="btn-test quantity-minus"></button>
+            <!-- Input +/- -->
+            <div class="column">
+              <h2>Input +/- </h2>
+              <form action="#">
+                <div class="quantity">
+                  <button type='button' class="btn-test quantity-plus"></button>
+                  <div class="quantity-holder">
+                    <input type="text" value="1" min="1" max="10" class="quantity-count">
+                  </div>
+                  <button type='button' class="btn-test quantity-minus"></button>
+                </div>
+              </form>
+            </div>
           </div>
-        </form>
+        </section>
+
+
 
         <!-- Accordion -->
         <h1>Accordion</h1>
