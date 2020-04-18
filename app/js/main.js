@@ -7,6 +7,7 @@ $(function() {
 	//= include/popup
   //= include/forms
 	//= include/tabs
+  //= include/multirange-slider
 	
 });
 

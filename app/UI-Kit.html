@@ -28,17 +28,23 @@
           
           <a href="#" class="scroll-next js-scroll-next">Scroll to next section</a>
         </div>
+
+
         <!-- next-section -->
         <div class="section" id="next-section">
-          <hr class="base">
-          <div class="ui-holder">
-            <div class="ui-holder__column">
+          <p>Hello, I'm a next section ;)</p>
+        </div>
+
+        <!-- Scroll tabs -->
+        <div class="scroll-tabs" id="scroll-tabs">
+          <div class="row">
+            <div class="column column--50">
               <!-- scroll -->
-              <h1>Scroll block</h1>
+              <h2>Scroll block</h2>
               <div class="scroll-text">
                 <p>
                   Лист Василя Стуса до сина 
-                  
+
                   "Поразка – це не тільки біда. Це ще й благо, добро. Поразка мусить стимулювати на чергову перемогу – це логіка сильних (а Ти – мужчина!). 
                   У поразці опускають руки лише слабкі. Освіта потрібна людині не для іспиту і вступу до технікуму, а для неї самої. Ти повинен бути освіченою людиною. Освіта – це вид гігієни. Письмо з помилками – то як невмиті руки чи зуби. Бо теперішня людина – тільки освічена. Людина – це обов’язок, а не титул (народився – і вже людина). Людина твориться, самонароджується. Власне, хто Ти є поки що? Кавалок глини - сирої, пластичної. Бери цей кавалок у обидві жмені і мни – доти, поки з нього не вийде щось тверде, окреслене, перем’яте. Уяви, що Бог, який творить людей - це Ти сам. Ти є Бог. Отож, як Бог самого себе, мни свою глину в руках, поки не відчуєш під мозолями кремінь. Для цього в Тебе найкращий час – Творися ж!"
                 </p>
@@ -65,11 +71,11 @@
                 </p>
               </div>
             </div>
-            <div class="ui-holder__column">
+            <div class="column column--50">
               <!-- tabs -->
-              <h1>Tabs block</h1>
+              <h2>Tabs block</h2>
               <div class="tabs-section">
-                
+
                 <div class="tabs">
                   <a href="a1" class="tabslink active">
                     <p data-title="a1">London</p>
@@ -84,7 +90,7 @@
                     <p data-title="a1">Madrid</p>
                   </a>
                 </div>
-                
+
                 <div class="holder-content">
                   <div class="tabcontent active" id="a1">
                     <h3>London</h3>
@@ -103,7 +109,7 @@
                     <p>Madrid is in the middle of Spain, in the Community of Madrid. The Community is a large area that includes the city as well as small towns and villages outside the city. 7 million people live in the Community. More than 3 million live in the city itself. </p>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -165,7 +171,6 @@
 
 
         <!-- Form elements -->
-
         <section class="form-elements" id="form-elements">
           <h1>Form elements</h1>
           <div class="row">
@@ -192,6 +197,40 @@
                   <button type='button' class="btn-test quantity-minus"></button>
                 </div>
               </form>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Range-slider -->
+            <div class="column">
+              <h2>Range-slider</h2>
+              <div class="range-holder">
+                <div class="range-search">Радиус поиска</div>
+                <div class="range-container">
+                  <div class="range">
+                    <input type="range" min="1" max="100" value="50" class="range-inp" id="slider-range">
+                  </div>
+                  <p class="slider-value"><span id="range-value"></span>км</p>
+                </div>
+              </div>
+            </div>
+            <!-- Multi Range slider -->
+            <div class="column">
+              <h2>Multi Range slider</h2>
+              <div class="multi-range">
+                <input type="text" id="example_id" name="example_name" value="" />
+              </div>
+            </div>
+
+            <div class="column">
+              <h2>Multi Range slider fields</h2>
+              <div class="multi-range-slider">
+                <input type="text" class="js-range-slider" value="" />
+              </div>
+              <div class="extra-controls">
+                <input type="text" class="js-input-from" value="0" />
+                <input type="text" class="js-input-to" value="0" />
+              </div>
             </div>
           </div>
         </section>
@@ -275,22 +314,6 @@
         </nav>
 
 
-        <!-- Range-slider -->
-        <h1>Range-slider</h1>
-        <div class="range-holder">
-          <div class="range-search">Радиус поиска</div>
-          <div class="range-container">
-            <div class="range">
-              <input type="range" min="1" max="100" value="50" class="range-inp" id="slider-range">
-            </div>
-            <p class="slider-value"><span id="range-value"></span>км</p>
-          </div>
-        </div>
-
-
-
-
-
 
         
       </div>
@@ -309,6 +332,7 @@
   <script src="js/libs/jquery.min.js"></script>
   <script src="js/libs/jquery.mCustomScrollbar.min.js"></script>
   <script src="js/libs/slick.min.js"></script>
+  <script src="js/libs/ion.rangeSlider.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

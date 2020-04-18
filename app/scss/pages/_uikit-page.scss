@@ -12,17 +12,12 @@ h1 {
 h2 {
   text-align: center;
   margin: 18px;
-  font-size: 32px;
+  font-size: 28px;
   text-transform: uppercase;
   color: #2980b9;
 }
-.ui-holder {
-  display: flex;
-  &__column {
-    width: 50%;
-  }
-}
 
+  // Hero
 .hero {
   padding-top: 60px;
   height: calc(100vh + 60px);
@@ -39,11 +34,25 @@ h2 {
   }
 }
 
-.scroll-text {
-  max-width: 85%;
-  width: 100%;
-  margin: 0 auto;
-  height: 240px;
+  // Next section
+#next-section {
+  height: 150px;
+  border: 2px solid #e74c3c;
+  background-color: #e74c3c;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.scroll-tabs {
+  .scroll-text {
+    max-width: 85%;
+    width: 100%;
+    margin: 0 auto;
+    height: 240px;
+  }
 }
 
 .base {
@@ -102,20 +111,9 @@ h2 {
 
   // form-elements
 .form-elements {
-
 }
 
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-.column {
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
+  // Checkbox
 .checkbox-section {
   text-align: center;
   .checkbox {
@@ -147,6 +145,7 @@ h2 {
   }
 }
 
+  // Quantity
 .quantity {
   display: flex;
   justify-content: center;
@@ -215,7 +214,98 @@ h2 {
   @include truncate(36px);
 }
 
-// Accordion
+  //Range slider
+.range-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.range {
+  width: 130px;
+  height: 9px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.range-search {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  color: $black;
+  opacity: 0.5;
+  margin-right: 30px;
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slider-value {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  color: blue;
+  opacity: 0.75;
+  min-width: 55px;
+  span {
+  }
+}
+
+.range-inp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #e74c3c;
+  outline: none;
+  border-radius: 50px;
+  transition: opacity .2s;
+}
+
+.range-inp:hover {
+  opacity: 1;
+}
+
+.range-inp::-webkit-slider-thumb {
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  background: blue;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.range-inp::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  background: blue;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+// Multi rage
+.multi-range {
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+.multi-range-slider {
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  // Accordion
+}
 .acc {
   max-width: 1200px;
   width: 100%;
@@ -296,7 +386,7 @@ h2 {
 }
 
 
-// Pagination
+  // Pagination
 .pagination-nav {}
 
 .pagination-list {
@@ -370,80 +460,21 @@ h2 {
   }
 }
 
-//Range slider
-.range-holder {
+
+.row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-}
-.range {
-  width: 130px;
-  height: 9px;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 100px;
-  position: relative;
-  margin-right: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
 }
 
-.range-search {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 500;
-  color: $black;
-  opacity: 0.5;
-  margin-right: 30px;
-}
-
-.range-container {
-  display: flex;
+.column {
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-}
-
-.slider-value {
-  margin: 0;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 500;
-  color: blue;
-  opacity: 0.75;
-  min-width: 55px;
-  span {
+  flex: 1 1 auto;
+  &--50 {
+    flex: 1 1 50%;
   }
-}
-
-.range-inp {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  background: #e6e6e6;
-  outline: none;
-  border-radius: 50px;
-  transition: opacity .2s;
-}
-
-.range-inp:hover {
-  opacity: 1;
-}
-
-.range-inp::-webkit-slider-thumb {
-  appearance: none;
-  width: 13px;
-  height: 13px;
-  background: blue;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.range-inp::-moz-range-thumb {
-  width: 13px;
-  height: 13px;
-  background: blue;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 50%;
 }
