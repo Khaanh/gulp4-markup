@@ -304,8 +304,8 @@ h2 {
   width: 100%;
   position: relative;
   margin: 0 auto;
-  // Accordion
 }
+  // Accordion
 .acc {
   max-width: 1200px;
   width: 100%;
@@ -476,5 +476,38 @@ h2 {
   flex: 1 1 auto;
   &--50 {
     flex: 1 1 50%;
+  }
+}
+
+// Develop
+.develop {
+  background-color: #000;
+  color: #fff;
+  padding: 6px;
+  position: relative;
+  text-align: center;
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    &:hover {
+      &:after {
+        transform: scale(1);
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #fff;
+      @include transition;
+      transform: scale(0);
+    }
   }
 }
