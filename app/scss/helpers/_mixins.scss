@@ -90,10 +90,9 @@ $mobile-portrait: 479px;
 
 
 // Truncate
-@mixin truncate($truncation-boundary) {
-  max-width: $truncation-boundary;
-  white-space: nowrap;
+@mixin text-truncate() {
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
