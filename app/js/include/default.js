@@ -43,6 +43,6 @@ $('.nav > ul > li > a').on( 'click', function(){
 });
 
 // Start from top
-$(window).on('beforeunload', function() {
-  $(window).scrollTop(0);
-})
+// $(window).on('beforeunload', function() {
+//   $(window).scrollTop(0);
+// })

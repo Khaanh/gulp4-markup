@@ -1,0 +1,50 @@
+.form {}
+
+.form-holder {}
+
+.form-row {}
+
+.form-col {}
+
+.form-control{
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: $txt-color;
+  height: 50px;
+  background-color: $white;
+  border: 1px solid #E0E6ED;
+  border-radius: 5px;
+  text-align: center;
+  padding: 14px 20px;
+
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  margin: 0;
+  @include transition;
+  &:focus {
+    border: 1px solid gold;
+  }
+}
+*::-webkit-input-placeholder {
+  opacity: 1;
+  color: #c7c7c7; 
+}
+*:-moz-placeholder {
+  opacity: 1;
+  color: #c7c7c7; 
+}
+*::-moz-placeholder {
+  opacity: 1;
+  color: #c7c7c7; 
+}
+*:-ms-input-placeholder {
+  opacity: 1;
+  color: #c7c7c7; 
+}
+

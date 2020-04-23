@@ -1,20 +1,24 @@
 #ui-kit {
   background-color: rgba(216,219,230,0.4);
   font-family: 'Gilroy-Semibold', sans-serif;
-}
-h1 {
-  text-align: center;
-  margin: 34px;
-  font-size: 38px;
-  text-transform: uppercase;
-  color: #27ae60;
-}
-h2 {
-  text-align: center;
-  margin: 18px;
-  font-size: 28px;
-  text-transform: uppercase;
-  color: #2980b9;
+  h1 {
+    text-align: center;
+    margin: 34px;
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #27ae60;
+    font-family: 'Gilroy-Semibold', sans-serif;
+    font-weight: 600;
+  }
+  h2 {
+    text-align: center;
+    margin: 18px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #2980b9;
+    font-family: 'Gilroy-Semibold', sans-serif;
+    font-weight: 600;
+  }
 }
 
   // Hero
@@ -211,7 +215,8 @@ h2 {
   width: 100%;
   text-align: center;
   pointer-events: none;
-  @include truncate(36px);
+  max-width: 36px;
+  @include text-truncate;
 }
 
   //Range slider
