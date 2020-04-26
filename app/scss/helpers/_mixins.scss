@@ -109,11 +109,13 @@ $mobile-portrait: 479px;
 @mixin hide-elem() {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: all 0.3s ease;
 }
 @mixin show-elem {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 // Pseudo-elements
