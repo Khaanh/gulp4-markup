@@ -1,14 +1,13 @@
 // Media sizes
-$desktop-lg: 1700px;
-$desktop-md: 1520px;
-$desktop-bg: 1400px;
-$desktop-st: 1280px;
-$desktop: 1170px;
-$tablet-landscape: 1025px;
+$desktop-lg: 1920px;
+$desktop-md: 1440px;
+$desktop: 1200px;
+$tablet-landscape: 1024px;
 $tablet-portrait: 992px;
 $mobile-landscape: 768px;
-$mobile-middle: 620px;
+$mobile-middle: 568px;
 $mobile-portrait: 479px;
+
 
 @mixin media($size) {
   @media only screen and (max-width: $size) {
