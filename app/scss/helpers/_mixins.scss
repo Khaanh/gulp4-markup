@@ -109,7 +109,7 @@ $mobile-portrait: 479px;
 @mixin hide-elem() {
   opacity: 0;
   visibility: hidden;
-  @content;
+  transition: all 0.3s ease;
 }
 @mixin show-elem {
   opacity: 1;
@@ -133,7 +133,7 @@ $mobile-portrait: 479px;
 }
 // Transitions
 @mixin transition() {
-  transition: all 0.3s ease-in-out
+  transition: all 0.3s ease-in
 }
 @mixin transition-long() {
   transition: all 0.5s ease-in-out
@@ -141,7 +141,7 @@ $mobile-portrait: 479px;
 
 //Hover
 @mixin hover() {
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: 1024px) {
     &:hover {
       @content;
     }

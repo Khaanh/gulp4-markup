@@ -124,6 +124,8 @@ h1, .h1{
 	color: $txt-color;
 	text-align: center;
 	margin: 0;
+	@include media(1024px) {}
+	@include media(768px) {}
 }
 h2, .h2{
 	font-size: 28px;
@@ -133,6 +135,8 @@ h2, .h2{
 	color: $txt-color;
 	text-align: center;
 	margin: 0 0 15px;
+	@include media(1024px) {}
+	@include media(768px) {}
 }
 h3, .h3{
 	font-size: 26px;
@@ -142,6 +146,8 @@ h3, .h3{
 	color: $txt-color;
 	text-align: center;
 	margin: 0 0 15px;
+	@include media(1024px) {}
+	@include media(768px) {}
 }
 h4, .h4{
 	font-size: 24px;
@@ -151,4 +157,6 @@ h4, .h4{
 	color: $txt-color;
 	text-align: left;
 	margin: 0 0 25px;
+	@include media(1024px) {}
+	@include media(768px) {}
 }
