@@ -1,9 +1,9 @@
 $(window).on('scroll', function() {
   // Active header
   if( $(this).scrollTop() > 150) {
-    $('.header').addClass('active')
+    $('.header').addClass('is-active')
   } else {
-    $('.header').removeClass('active')
+    $('.header').removeClass('is-active')
   }
   
   // Active btn to top
