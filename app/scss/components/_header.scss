@@ -8,7 +8,7 @@
     z-index: 998;
     background-color: #000;
     @include transition;
-    &.active {}
+    &.is-active {}
   }
   .header-holder {}
   .nav {
