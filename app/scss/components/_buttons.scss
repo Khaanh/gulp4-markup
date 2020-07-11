@@ -4,7 +4,7 @@
   line-height: $btn-lh;
   font-weight: $btn-fw;
   color: $btn-color;
-  border: 1px solid $trans;
+  border: 1px solid $transp;
   background-color: $btn-bgc;
   border-radius: $btn-radius;
 
@@ -21,7 +21,7 @@
   outline: none;
   appearance: none;
   background-origin: border-box;
-  @include transition;
+  transition: 0.3s ease;
   &:hover {
   }
   &:focus {}
