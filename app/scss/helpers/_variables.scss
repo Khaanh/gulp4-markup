@@ -1,17 +1,13 @@
-// Basic colors
+// =====Basic colors=====
 $white: #fff;
 $black: #000;
 $gray: #ccc;
-$trans: transparent;
+$transp: transparent;
 
 // Custom colors...
 $text: #686868;
-$m01: #667eea; /* main 1*/
-$m02: #764ba2; /* main 2*/
-$n01: #f5f7fa; /* neutral 1*/
-$n02: #c3cfe2; /* neutral 2*/
 
-// ============Typography base============
+// =====Typography base=====
 $main-font: 'Montserrat', Arial, sans-serif;
 $sec-font: 'Arial', Open Sans, sans-serif;
 $font-weight: 400;
@@ -19,34 +15,34 @@ $font-size: 16px;
 $line-height: 1.5;
 $txt-color: $black;
 
-// ============Typography buttons============
+// =====Typography buttons=====
 $btn-ff: $main-font;
 $btn-fz: $font-size;
 $btn-lh: 20px;
 $btn-fw: $font-weight;
 $btn-color: $txt-color;
-$btn-bgc: $trans;
+$btn-bgc: $transp;
 $btn-radius: 0px;
 
-// Malihu scrollbar customs
-$dragger_bar-color: #2c3e50;
-$dragger_bar-width: 4px;
-$dragger_bar-radius: 14px;
-$dragger_rail-color:#7f8c8d;
-$scrollTools-opacity: 1;
+// =====Malihu scrollbar customs=====
+// $dragger_bar-color: #2c3e50;
+// $dragger_bar-width: 4px;
+// $dragger_bar-radius: 14px;
+// $dragger_rail-color:#7f8c8d;
+// $scrollTools-opacity: 1;
 
-// Styles scrollbars
-.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
-  background-color: $dragger_bar-color;
-}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  background-color: $dragger_bar-color;
-  width: $dragger_bar-width;
-  border-radius: $dragger_bar-radius;
-}
-.mCSB_scrollTools .mCSB_draggerRail {
-  background-color: $dragger_rail-color;
-}
-.mCSB_scrollTools {
-  opacity: $scrollTools-opacity;
-}
+// =====Styles scrollbars=====
+// .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+//   background-color: $dragger_bar-color;
+// }
+// .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+//   background-color: $dragger_bar-color;
+//   width: $dragger_bar-width;
+//   border-radius: $dragger_bar-radius;
+// }
+// .mCSB_scrollTools .mCSB_draggerRail {
+//   background-color: $dragger_rail-color;
+// }
+// .mCSB_scrollTools {
+//   opacity: $scrollTools-opacity;
+// }

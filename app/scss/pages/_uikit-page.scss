@@ -50,39 +50,10 @@
   font-size: 28px;
 }
 
-.scroll-tabs {
-  .scroll-text {
-    max-width: 85%;
-    width: 100%;
-    margin: 0 auto;
-    height: 240px;
-  }
-}
 
 .base {
   background: url(../img/line.svg) no-repeat center / auto;
   margin: 25px 0;
-}
-
-.slider-block {
-  &__box {
-    position: relative;
-  }
-  &__arrows {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    z-index: 100;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-  }
-  &__list {}
-  &__items {
-    height: 120px;
-    border: 1px solid #27ae60;
-  }
 }
 
 .slideshow {
@@ -106,11 +77,6 @@
       display: block;
     }
   }
-}
-
-.js-modal-open {
-  display: block;
-  text-align: center;
 }
 
   // form-elements
@@ -219,98 +185,6 @@
   @include text-truncate;
 }
 
-  //Range slider
-.range-holder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.range {
-  width: 130px;
-  height: 9px;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 100px;
-  position: relative;
-  margin-right: 10px;
-}
-
-.range-search {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 500;
-  color: $black;
-  opacity: 0.5;
-  margin-right: 30px;
-}
-
-.range-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.slider-value {
-  margin: 0;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 500;
-  color: blue;
-  opacity: 0.75;
-  min-width: 55px;
-  span {
-  }
-}
-
-.range-inp {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  background: #e74c3c;
-  outline: none;
-  border-radius: 50px;
-  transition: opacity .2s;
-}
-
-.range-inp:hover {
-  opacity: 1;
-}
-
-.range-inp::-webkit-slider-thumb {
-  appearance: none;
-  width: 13px;
-  height: 13px;
-  background: blue;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.range-inp::-moz-range-thumb {
-  width: 13px;
-  height: 13px;
-  background: blue;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-// Multi rage
-.multi-range {
-  max-width: 350px;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
-.multi-range-slider {
-  max-width: 350px;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
-
 .row {
   display: flex;
   align-items: flex-start;
@@ -357,7 +231,7 @@
       height: 1px;
       width: 100%;
       background-color: #fff;
-      @include transition;
+      transition: 0.3s ease;
       transform: scale(0);
     }
   }
