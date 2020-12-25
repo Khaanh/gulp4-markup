@@ -98,6 +98,11 @@ gulp.task('img-min', function() {
 	.pipe(gulp.dest('dist/img'))
 })
 
+gulp.task('favicon', function() {
+	return gulp.src('app/**/*.+(png|jpg|ico)')
+	.pipe(gulp.dest('dist'))
+})
+
 gulp.task('clean', async function() {
 	return del.sync('dist')
 })
@@ -112,4 +117,4 @@ gulp.task('watch', function() {
 	gulp.watch('./app/fonts/**/*.*', gulp.parallel('fonts'));
 })
 
-gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min', 'fonts']))
+gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min', 'fonts'. 'favicon']))
