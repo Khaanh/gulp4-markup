@@ -11,11 +11,11 @@ const	gulp = require('gulp'),
 			uglify = require('gulp-uglify-es').default,
 			rigger = require('gulp-rigger'),
 			imagemin = require('gulp-imagemin'),
+			svgmin = require('gulp-svgmin'),
 			pngquant = require('imagemin-pngquant'),
 			cache = require('gulp-cache'),
 			del = require('del'),
 			ghPages = require('gulp-gh-pages');
-
 
 
 gulp.task('browser-sync', function() {
@@ -98,6 +98,12 @@ gulp.task('img-min', function() {
 	.pipe(gulp.dest('dist/img'))
 })
 
+gulp.task('svg-min', function () {
+	return gulp.src('app/img/*.svg')
+	.pipe(svgmin())
+	.pipe(gulp.dest('dist/img'));
+});
+
 gulp.task('favicon', function() {
 	return gulp.src('app/**/*.+(png|jpg|ico)')
 	.pipe(gulp.dest('dist'))
@@ -113,8 +119,8 @@ gulp.task('watch', function() {
 	gulp.watch('app/js/main.js', gulp.parallel('js'));
 	gulp.watch('app/js/include/**/*.js', gulp.parallel('js'));
 	gulp.watch(['app/js/libs/**/*.js', '!app/js/libs/**/*.min.js' ], gulp.parallel('js-libs'));
-	gulp.watch('app/img/**/*', gulp.parallel('img-min'));
+	gulp.watch('app/img/**/*', gulp.series('img-min', 'svg-min'));
 	gulp.watch('./app/fonts/**/*.*', gulp.parallel('fonts'));
 })
 
-gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min', 'fonts'. 'favicon']))
+gulp.task('default', gulp.parallel('browser-sync','watch', ['html','clean','sass', 'js-libs', 'js', 'img-min', 'svg-min', 'fonts', 'favicon']))
