@@ -1,48 +1,59 @@
-#ui-kit {
-  .header {
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 998;
-    background-color: #000;
-    transition: 0.3s ease;
-    &.is-active {}
-  }
-  .header-holder {}
-  .nav {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 60px;
-      li {
-        margin: 0 14px;
-        a {
-          font-family: Gilroy-Semibold,sans-serif;
-          text-decoration: none;
-          font-size: 16px;
-          display: inline-block;
-          padding: 2px 0 6px;
-          color: $white;
-          position: relative;
-          overflow: hidden;
-          &:after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            background-color: $white;
-            position: absolute;
-            left: -100%;
-            bottom: 0;
-            transition: 0.3s ease;
-          }
-          &:hover {
+.header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 16px 0;
+  background-color: #000;
+  transition: 0.3s ease;
+  &.is-fixed {}
+}
+
+.header-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin: 0 14px;
+
+      a {
+        font-family: Gilroy-Semibold,sans-serif;
+        text-decoration: none;
+        font-size: 16px;
+        display: inline-block;
+        padding: 4px;
+        color: $white;
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $white;
+          position: absolute;
+          left: -100%;
+          bottom: 0;
+          transition: 0.3s ease;
+        }
+
+        &:hover {
+          @media only screen and (min-width: 1025px) {
             &:after {
               left: 0;
             }
@@ -51,4 +62,27 @@
       }
     }
   }
+}
+
+.burger {
+  height: 36px;
+  width: 36px;
+  display: none;
+
+  @media only screen and (max-width: 1024px) {
+    display: block;
+  }
+  &__holder {
+    position: relative;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      transition: 0.3s ease;
+    }
+  }
+
+  &.is-open {}
 }
